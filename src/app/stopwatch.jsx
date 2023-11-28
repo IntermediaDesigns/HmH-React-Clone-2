@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 // Create a timer that starts counting up automatically, stops, and clears the timer, add styling to space out the buttons
@@ -21,12 +21,6 @@ export default function Timer() {
     clearInterval(intervalId);
     setSeconds(0);
   };
-
-  useEffect(() => {
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [intervalId]);
 
   const buttonStyle = {
     marginRight: '5px',
